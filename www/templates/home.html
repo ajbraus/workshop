@@ -1,0 +1,38 @@
+<ion-view view-title="Workshop Cafe">
+  <ion-content>
+  <div class="list padding">
+    <form ng-submit="checkIn()">
+      <h5>Check In</h5>
+      <label>Select Seat Number to Use the Workshop</label>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Seat Number
+        </div>
+        <select ng-model="seat_number" required>
+          <option></option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+        </select>
+      </label>
+      <button class="button button-block button-dark" type="submit">Check In</button>
+    </form>
+  </div>  
+    <div class='btn-img-coffee'>
+      <div class='btn-img-text'>Order Food & Drinks</div>
+    </div>
+    <div class='btn-img-staff'>
+      <div class='btn-img-text'>Hail Staff</div>
+    </div>
+    <div class='btn-img-how'>
+      <div class='btn-img-text'>How WC Works</div>
+    </div>
+  </ion-content>
+  <!-- align to the bottom of the page -->
+  <div style="position: absolute; bottom: 0px; width: 100%; background:white;">
+  </div>
+</ion-view>

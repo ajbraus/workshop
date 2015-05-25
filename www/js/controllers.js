@@ -33,6 +33,28 @@ angular.module('starter.controllers', [])
   };
 })
 
+.controller('HomeCtrl', function ($scope) {
+  $scope.items = [
+    { name: 'Coffee', id: 1 },
+    { name: 'Coffee', id: 2 },
+    { name: 'Coffee', id: 3 },
+    { name: 'Coffee', id: 4 },
+    { name: 'Coffee', id: 5 },
+    { name: 'Coffee', id: 6 }
+  ];
+  $scope.checkIn = function() {
+    // $http.post('/checkins', $scope.seat_number)
+    //   .success(function (data) {
+
+    //   })
+    //   .error(function (data) {
+
+    //   })
+    console.log("checking in to seat number" + $scope.seat_number);
+  }
+
+})
+
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },

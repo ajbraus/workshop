@@ -2,6 +2,8 @@ I arrive at workshop cafe, open the app and check in and add my workspot. If I h
 
 I want to order some food from my seat. I can hail the staff, or text in an order, email, or call. I can preview the menu and order something.
 
+Login with phone number
+
 I recieve a push notification to let me know I have a negative account balance and I should refill my hours. I tap through and it prompts me to add 10 hours.
 
 I can pay with a "VIP table" - why not with cover?
