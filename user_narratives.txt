@@ -1,0 +1,32 @@
+I arrive at workshop cafe, open the app and check in and add my workspot. If I have a 0 or negative account balance I am prompted ot add money
+
+I want to order some food from my seat. I can hail the staff, or text in an order, email, or call. I can preview the menu and order something.
+
+I recieve a push notification to let me know I have a negative account balance and I should refill my hours. I tap through and it prompts me to add 10 hours.
+
+I can pay with a "VIP table" - why not with cover?
+
+I can see a table of my utlization and add more time to my account
+
+I can see the employee's profiles (team page)
+
+I can see the privacy & terms of use (privacy and terms page)
+
+
+Main page
+  check in/check out, menu/order
+Sidebar menue
+  - view utlization
+  - manage payment add more time
+  - team
+  - privacy 
+  - terms
+
+
+Download the app
+open it
+Check in
+Want to buy something?
+
+$$$ check in 
+$$$ order something - uber payment feeling
