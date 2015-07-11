@@ -45,3 +45,33 @@
   font-weight: bold;
   font-size: 30px;
 }
+
+.red-bubble {
+  text-decoration: none;
+  background: rgb(202, 202, 202);
+  border-radius: 45px;
+  color: white;
+  font-weight: bold;
+  padding: 3px 6px 3px 6px;
+  font-size: 10px;
+  position: relative;
+  left: 7px;
+  top: -7px;
+}
+
+.img-responsive{
+  width:100%;
+}
+
+.button-clear.button-clear {
+  color:#444;
+}
+
+textarea {
+    resize: none;
+}
+
+.order-body {
+  height: 100px;
+  margin-top: 10px;
+}

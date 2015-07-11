@@ -1,0 +1,12 @@
+sign in with phone number
+Display menu and have form
+
+How it works
+  Text
+
+Staff Bios
+  
+
+new order
+  blow in seat number
+  Use Twillio api to text order to staff 

@@ -1,4 +1,9 @@
 <ion-view view-title="Workshop Cafe">
+  <ion-nav-buttons side="secondary">
+    <button class="button button-clear" ng-click="openModal()">
+      Menu
+    </button>
+  </ion-nav-buttons>
   <ion-content>
   <div class="list padding">
     <form ng-submit="checkIn()">
@@ -22,13 +27,13 @@
       <button class="button button-block button-dark" type="submit">Check In</button>
     </form>
   </div>  
-    <div class='btn-img-coffee'>
+    <div ng-click="newOrder()" class='btn-img-coffee'>
       <div class='btn-img-text'>Order Food & Drinks</div>
     </div>
-    <div class='btn-img-staff'>
+    <div ng-click="hail()" class='btn-img-staff'>
       <div class='btn-img-text'>Hail Staff</div>
     </div>
-    <div class='btn-img-how'>
+    <div ng-click="howItWorks()" class='btn-img-how'>
       <div class='btn-img-text'>How WC Works</div>
     </div>
   </ion-content>
@@ -36,3 +41,25 @@
   <div style="position: absolute; bottom: 0px; width: 100%; background:white;">
   </div>
 </ion-view>
+
+
+<script id="home-menu-modal.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar>
+      <div class="buttons">
+        <button class="button button-clear" ng-click="closeModal()">
+          <i class='icon ion-close-round'></i>
+        </button>
+      </div>
+      <h1 class="title">Menu</h1>
+      <div class="buttons">
+        <button class="button button-clear" ng-click="newOrder()">
+          New Order
+        </button>
+      </div>
+    </ion-header-bar>
+    <ion-content>
+      <img class="img-responsive" ng-src="https://dl.dropboxusercontent.com/s/fnkti4wg8umq0ac/MENUS-01.png" />
+    </ion-content>
+  </ion-modal-view>
+</script>

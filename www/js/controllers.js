@@ -33,15 +33,35 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('HomeCtrl', function ($scope) {
-  $scope.items = [
-    { name: 'Coffee', id: 1 },
-    { name: 'Coffee', id: 2 },
-    { name: 'Coffee', id: 3 },
-    { name: 'Coffee', id: 4 },
-    { name: 'Coffee', id: 5 },
-    { name: 'Coffee', id: 6 }
-  ];
+.controller('HomeCtrl', function ($scope, $location, $ionicModal) {
+
+  $ionicModal.fromTemplateUrl('home-menu-modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+  $scope.openModal = function() {
+    $scope.modal.show();
+  };
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+
+  $scope.newOrder = function() {
+    console.log('new order')
+    $scope.modal.hide();
+    $location.path('/app/home/new-order');
+  }
+
+  $scope.hail = function() {
+    $location.path('/app/home/hail');
+  }
+
+  $scope.howItWorks = function() {
+    $location.path('app/home/how-it-works');
+  }
+
   $scope.checkIn = function() {
     // $http.post('/checkins', $scope.seat_number)
     //   .success(function (data) {
@@ -55,6 +75,38 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('NewOrderCtrl', function($scope, $stateParams, $ionicModal) {
+  $scope.order = [];
+
+  $scope.items = [
+    {name: "Coffee", desc: "Light Roast", img_url: "http://cdn1.medicalnewstoday.com/content/images/headlines/289/289891/coffee.jpg"}
+  , {name: "Latte", desc: "Light Roast", img_url: "http://cdn1.medicalnewstoday.com/content/images/headlines/289/289891/coffee.jpg"}
+  , {name: "Salad", desc: "Light Roast", img_url: "http://cdn1.medicalnewstoday.com/content/images/headlines/289/289891/coffee.jpg"}
+  , {name: "Coffee", desc: "Light Roast", img_url: "http://cdn1.medicalnewstoday.com/content/images/headlines/289/289891/coffee.jpg"}
+  , {name: "Coffee", desc: "Light Roast", img_url: "http://cdn1.medicalnewstoday.com/content/images/headlines/289/289891/coffee.jpg"}
+  , {name: "Coffee", desc: "Light Roast", img_url: "http://cdn1.medicalnewstoday.com/content/images/headlines/289/289891/coffee.jpg"}
+  ]
+
+  $scope.addToOrder = function() {
+    var coffee = {name: "Coffee", desc: "Light Roast", img_url: "http://cdn1.medicalnewstoday.com/content/images/headlines/289/289891/coffee.jpg"}
+    $scope.order.push(coffee)
+    console.log($scope.order)
+  }
+
+  $ionicModal.fromTemplateUrl('order-menu-modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+  $scope.openModal = function() {
+    $scope.modal.show();
+  };
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+})
+
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
@@ -66,5 +118,17 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('StaffCtrl', function($scope, $stateParams) {
+  $scope.staff = [
+    { name: "Ilana"
+    , bio: 'I was born and raised in San Diego. I studied history in college, so I\'m pretty awesome at trivia. I love events (especially weddings), whether it\'s planning, photographing or writing about them.  My mantra for the year is \"make it happen!\"'
+    , img_url: 'https://app.workshopcafe.com/assets/our_people/Iliana.jpg'
+    },
+    { name: "Thomas"
+    , bio: 'Born and raised in California. I am a freelance documentary and music photographer based in San Francisco. I love coffee, cycling, and conventional film photography.'
+    , img_url: 'https://app.workshopcafe.com/assets/our_people/Thomas.jpg'
+    }
+  ]
 });
+
+

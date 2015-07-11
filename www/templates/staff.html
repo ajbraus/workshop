@@ -1,0 +1,11 @@
+<ion-view view-title="Staff Bios">
+  <ion-content>
+    <ion-list>
+       <ion-item class='item-thumbnail-left item-text-wrap' ng-repeat="person in staff">
+         <img ng-src="{{person.img_url}}" />
+         <h3>{{person.name}}</h3>
+         <p>{{person.bio}}</p>
+       </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

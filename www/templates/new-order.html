@@ -1,0 +1,43 @@
+<ion-view view-title="New Order">
+  <ion-nav-buttons side="secondary">
+    <button class="button button-clear" ng-click="openModal()">
+      Menu
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="list">
+      <label class="item item-input">
+        <textarea autofocus="true" class='order-body' placeholder="What would you like?" ng-model="order.body"></textarea>
+      </label>
+      <div class="padding">
+        <button class="button button-light button-block">
+          Send Order
+        </button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+
+<script id="order-menu-modal.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar>
+      <h1 class="title">Menu</h1>
+      <div class="buttons">
+        <button class="button button-clear" ng-click="closeModal()">
+          <i class='icon ion-close-round'></i>
+        </button>
+      </div>
+    </ion-header-bar>
+    <ion-content>
+      <img class="img-responsive" ng-src="https://dl.dropboxusercontent.com/s/fnkti4wg8umq0ac/MENUS-01.png" />
+    </ion-content>
+  </ion-modal-view>
+</script>
+
+
+     <!--  <ion-item class='item-thumbnail-left item-icon-right' ng-repeat="item in items">
+        <img ng-src="{{item.img_url}}" />
+        <h3>{{item.name}}</h3>
+        <p>{{item.desc}}</p>
+        <i class="icon ion-plus-round" ng-click="addToOrder()"></i>
+      </ion-item> -->
