@@ -1,12 +1,8 @@
-sign in with phone number
-Display menu and have form
-
+sign in with phone number - verification code
 How it works
-  Text
-
-Staff Bios
-  
-
 new order
   blow in seat number
   Use Twillio api to text order to staff 
+
+DONE Staff Bios
+DONE Privacy

@@ -49,6 +49,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.privacy', {
+    url: "/home/privacy",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/privacy.html"
+      }
+    }
+  })
+
   .state('app.staff', {
     url: "/home/staff",
     views: {
