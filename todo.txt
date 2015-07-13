@@ -1,4 +1,9 @@
 sign in with phone number - verification code
+facebook, twitter, email
+
+Your Account
+  See activity history
+  Add $$$
 
 new order
   blow in seat number

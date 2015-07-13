@@ -50,6 +50,7 @@ angular.module('starter', ['ionic', 'angularMoment', 'starter.controllers'])
     views: {
       'menuContent': {
         templateUrl: "templates/hail.html"
+      , controller: 'NewOrderCtrl'
       }
     }
   })
@@ -69,6 +70,16 @@ angular.module('starter', ['ionic', 'angularMoment', 'starter.controllers'])
       'menuContent': {
         templateUrl: "templates/staff.html"
       , controller: 'StaffCtrl'
+      }
+    }
+  })
+
+  .state('app.account', {
+    url: "/home/account",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/account.html"
+      , controller: 'AccountCtrl'
       }
     }
   })

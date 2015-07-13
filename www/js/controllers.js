@@ -98,23 +98,6 @@ angular.module('starter.controllers', [])
 })
 
 .controller('NewOrderCtrl', function($scope, $stateParams, $ionicModal) {
-  $scope.order = [];
-
-  $scope.items = [
-    {name: "Coffee", desc: "Light Roast", img_url: "http://cdn1.medicalnewstoday.com/content/images/headlines/289/289891/coffee.jpg"}
-  , {name: "Latte", desc: "Light Roast", img_url: "http://cdn1.medicalnewstoday.com/content/images/headlines/289/289891/coffee.jpg"}
-  , {name: "Salad", desc: "Light Roast", img_url: "http://cdn1.medicalnewstoday.com/content/images/headlines/289/289891/coffee.jpg"}
-  , {name: "Coffee", desc: "Light Roast", img_url: "http://cdn1.medicalnewstoday.com/content/images/headlines/289/289891/coffee.jpg"}
-  , {name: "Coffee", desc: "Light Roast", img_url: "http://cdn1.medicalnewstoday.com/content/images/headlines/289/289891/coffee.jpg"}
-  , {name: "Coffee", desc: "Light Roast", img_url: "http://cdn1.medicalnewstoday.com/content/images/headlines/289/289891/coffee.jpg"}
-  ]
-
-  $scope.addToOrder = function() {
-    var coffee = {name: "Coffee", desc: "Light Roast", img_url: "http://cdn1.medicalnewstoday.com/content/images/headlines/289/289891/coffee.jpg"}
-    $scope.order.push(coffee)
-    console.log($scope.order)
-  }
-
   $ionicModal.fromTemplateUrl('order-menu-modal.html', {
     scope: $scope,
     animation: 'slide-in-up'
@@ -129,14 +112,14 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+.controller('AccountCtrl', function($scope) {
+  $scope.transactions = [
+    { title: 'Reggae' },
+    { title: 'Chill' },
+    { title: 'Dubstep' },
+    { title: 'Indie' },
+    { title: 'Rap' },
+    { title: 'Cowbell' }
   ];
 })
 
