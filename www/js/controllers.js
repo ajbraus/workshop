@@ -33,7 +33,9 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('HomeCtrl', function ($scope, $location, $ionicModal) {
+.controller('HomeCtrl', function ($scope, $location, $ionicModal, $ionicPopup) {
+
+  $scope.today = new Date();
 
   $ionicModal.fromTemplateUrl('home-menu-modal.html', {
     scope: $scope,
@@ -63,16 +65,36 @@ angular.module('starter.controllers', [])
   }
 
   $scope.checkIn = function() {
-    // $http.post('/checkins', $scope.seat_number)
+    // $http.post('/checkins', $scope.seat_id)
     //   .success(function (data) {
 
     //   })
     //   .error(function (data) {
 
     //   })
-    console.log("checking in to seat number" + $scope.seat_number);
+    $scope.checkedInAt = new Date();
+    console.log("checking in to seat number" + $scope.seat_id);
   }
 
+  $scope.checkOut = function() {
+    var confirmPopup = $ionicPopup.confirm({
+      title: 'Check Out of Workspace?',
+      template: 'Are you sure you want to check out?'
+    });
+    confirmPopup.then(function(res) {
+      if(res) {
+        $scope.checkedOutAt = new Date();
+      } else {
+        
+      }
+    });
+  }
+
+  $scope.checkInAgain = function() {
+    $scope.checkedInAt = null;
+    $scope.checkedOutAt = null;
+    $scope.seat_id = null;
+  }
 })
 
 .controller('NewOrderCtrl', function($scope, $stateParams, $ionicModal) {

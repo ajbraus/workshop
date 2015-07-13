@@ -1,8 +1,10 @@
 sign in with phone number - verification code
-How it works
+
 new order
   blow in seat number
   Use Twillio api to text order to staff 
 
+DONE Checkin
 DONE Staff Bios
 DONE Privacy
+DONE How it works
